@@ -1,6 +1,6 @@
 <!-- Invalid Case 6: Nodes have no ID's -->
 <graph>
-    <id>g0</id>
+    <id>g7</id>
     <name>The Graph Name</name>
     <nodes>
         <node>

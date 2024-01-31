@@ -1,6 +1,6 @@
 <!-- Valid Case 2: A graph without edges is a valid graph -->
 <graph>
-    <id>g0</id>
+    <id>g2</id>
     <name>The Graph Name</name>
     <nodes>
         <node>

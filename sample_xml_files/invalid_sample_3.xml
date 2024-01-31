@@ -1,6 +1,6 @@
 <!-- Invalid Case 3: Graph has no name -->
 <graph>
-    <id>g0</id>
+    <id>g4</id>
     <nodes>
         <node>
             <id>a</id>

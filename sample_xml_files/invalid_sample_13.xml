@@ -1,6 +1,6 @@
 <!-- Invalid Case 13: Edge does not lead to any node -->
 <graph>
-    <id>g0</id>
+    <id>g14</id>
     <name>The Graph Name</name>
     <nodes>
         <node>

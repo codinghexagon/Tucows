@@ -1,7 +1,7 @@
 <!-- Assumption  -->
 <!-- Invalid Case 14: It was not mentioned but assuming that edge ID is required  -->
 <graph>
-    <id>g0</id>
+    <id>g15</id>
     <name>The Graph Name</name>
     <nodes>
         <node>

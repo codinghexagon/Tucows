@@ -1,6 +1,6 @@
 <!-- Invalid Case 4: Nodes are not present in graph -->
 <graph>
-    <id>g0</id>
+    <id>g5</id>
     <name>The Graph Name</name>
     <edges>
         <node>

@@ -1,6 +1,6 @@
 <!-- Invalid Case 11: Edge does not has from tag in nodes -->
 <graph>
-    <id>g0</id>
+    <id>g12</id>
     <name>The Graph Name</name>
     <nodes>
         <node>

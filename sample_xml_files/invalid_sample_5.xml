@@ -1,6 +1,6 @@
 <!-- Invalid Case 5: Nodes tag is present but there are no nodes in it -->
 <graph>
-    <id>g0</id>
+    <id>g6</id>
     <name>The Graph Name</name>
     <nodes>
         

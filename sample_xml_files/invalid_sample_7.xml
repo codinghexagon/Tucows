@@ -1,6 +1,6 @@
 <!-- Invalid Case 7: One node does not have an <id> tag -->
 <graph>
-    <id>g0</id>
+    <id>g8</id>
     <name>The Graph Name</name>
     <nodes>
         <node>

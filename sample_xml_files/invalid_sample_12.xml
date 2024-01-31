@@ -1,6 +1,6 @@
 <!-- Invalid Case 12: One node does not have a <to> tag -->
 <graph>
-    <id>g0</id>
+    <id>g13</id>
     <name>The Graph Name</name>
     <nodes>
         <node>

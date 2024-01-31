@@ -1,6 +1,6 @@
 <!-- Invalid Case 1: Root node is not a graph -->
 <graphs>
-    <id>g0</id>
+    <id>g3</id>
     <name>The Graph Name</name>
     <nodes>
         <node>

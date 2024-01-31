@@ -1,6 +1,6 @@
 <!-- Valid Case 1: Given xml file -->
 <graph>
-    <id>g0</id>
+    <id>g1</id>
     <name>The Graph Name</name>
     <nodes>
         <node>
