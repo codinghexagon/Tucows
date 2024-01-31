@@ -8,13 +8,16 @@ from db_handler import clean_data
 clean_data()
 
 def test_main_script_output_default():
+    clean_data()
     result = subprocess.run(['python3', 'main.py'], stdout=subprocess.PIPE, text=True)
     expected_output = (
         "XML file downloaded successfully and saved in the 'downloaded_xml_files' directory.\n"
         "XML is Valid\n"
         "[('a', 'a')]\n"
+        "{\"answers\": [{\"paths\": {\"from\": \"a\", \"to\": \"e\", \"paths\": [[\"a\", \"e\"]]}}, {\"cheapest\": {\"from\": \"a\", \"to\": \"e\", \"path\": [\"a\", \"e\"]}}]}\n"
     )
     assert result.stdout.strip() == expected_output.strip()
+
 
 def test_main_script_output_with_filename():
     clean_data()
@@ -23,6 +26,7 @@ def test_main_script_output_with_filename():
         "XML file downloaded successfully and saved in the 'downloaded_xml_files' directory.\n"
         "XML is Valid\n"
         "[('a', 'a')]\n"
+        "{\"answers\": [{\"paths\": {\"from\": \"a\", \"to\": \"e\", \"paths\": [[\"a\", \"e\"]]}}, {\"cheapest\": {\"from\": \"a\", \"to\": \"e\", \"path\": [\"a\", \"e\"]}}]}\n"
     )
     assert result.stdout == expected_output
 
@@ -33,11 +37,13 @@ def test_main_script_output_with_valid_samples():
     ]
 
     for sample in valid_samples:
+        clean_data()
         result = subprocess.run(['python3', 'main.py', f'sample_xml_files/{sample}'], stdout=subprocess.PIPE, text=True)
         expected_output = (
             "XML file downloaded successfully and saved in the 'downloaded_xml_files' directory.\n"
             "XML is Valid\n"
-            "[('a', 'a')]\n"
+            "[]\n"
+            "{\"answers\": [{\"paths\": {\"from\": \"a\", \"to\": \"e\", \"paths\": []}}, {\"cheapest\": {\"from\": \"a\", \"to\": \"e\", \"path\": false}}]}\n"
         )
         assert result.stdout == expected_output
 
@@ -63,3 +69,5 @@ def test_main_script_output_with_invalid_samples():
         result = subprocess.run(['python3', 'main.py', f'sample_xml_files/{sample}'], stdout=subprocess.PIPE, text=True)
         expected_output = f"XML file downloaded successfully and saved in the 'downloaded_xml_files' directory.\n{expected_error}\n"
         assert result.stdout == expected_output
+
+clean_data()
