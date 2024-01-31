@@ -42,17 +42,18 @@ def validate_node_structure(root, node_ids):
 
 def validate_edge_structure(root, node_ids):
     edges = root.find('edges')
+    edge_ids = set()
     
     if edges is None:
         raise ValueError("<edges> groups must be present")
 
     for edge in edges:
-        from_node = edge.find('from')
-        to_node = edge.find('to')
-        if from_node is None or to_node is None:
-            raise ValueError("Each <edge> must have a <from> and a <to> tag")
+        if edge.find('from') is None or edge.find('to') is None or edge.find('id'):
+            raise ValueError("Each <edge> must have a <id>, <from> and a <to> tag")
         
-        from_node_text = from_node.text
-        to_node_text = to_node.text
-        if from_node_text not in node_ids or to_node_text not in node_ids:
+        if edge.find('id').text in edge_ids:
+            raise ValueError(f"All nodes must have unique <id> tags, but '{edge.find('id').text}' is repeated")
+        edge_ids.add(edge.find('id').text)
+
+        if from_node.text not in node_ids or to_node.text not in node_ids:
             raise ValueError(f"Each <edge>'s <from> and <to> tags must correspond to defined nodes, but '{from_node_text}' or '{to_node_text}' is undefined")
