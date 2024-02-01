@@ -60,8 +60,8 @@ We have listed a bunch of valid and invalid sample files in `sample_xml_files` d
    # Examples
    python main.py sample_xml_files/valid_sample_1.xml
    python main.py sample_xml_files/valid_sample_2.xml
-   python main.py sample_xml_files/invalid_sample_1.xml
-   python main.py sample_xml_files/invalid_sample_2.xml
+   python main.py sample_xml_files/invalid_sample_01.xml
+   python main.py sample_xml_files/invalid_sample_02.xml
    ...
    ```
    
